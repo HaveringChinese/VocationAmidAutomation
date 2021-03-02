@@ -1,0 +1,226 @@
+header {
+    margin: 0 auto 0 auto;
+    border-top: solid black 40px;
+    border-left: solid black 40px;
+    border-right: solid black 40px;
+    border-bottom: solid black 40px;
+    background-color: black;
+    position: relative;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+button {
+    margin: 5% auto 5% auto;
+    background-color: black;
+    color: white;
+    font-size: 200%;
+    width: 30%;
+    height: 30%;
+}
+
+
+.btn:hover {
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.darken {
+    background: black;
+    background-color: black;
+    transition-duration: 2s;
+}
+
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 500%;
+    color: white;
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+#lbookend {
+    width: 15%;
+    display: inline-block;
+    position: absolute;
+    left: 2%;
+    bottom: 0%;
+}
+
+#rbookend {
+    width: 15%;
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    bottom: 0%;
+}
+
+#header-image-l {
+    width: 6.5%;
+    display: inline-block;
+    position: absolute;
+    left: 6.3%;
+    top: 34%;
+}
+
+#header-image-r {
+    width: 5.8%;
+    display: inline-block;
+    position: absolute;
+    right: 6.7%;
+    top: 35%;
+}
+
+@keyframes spinning {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  }
+.spin {
+    animation-name: spinning;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+
+.subheader {
+    font-family: sans-serif;
+    font-size: 200%;
+    color: white;
+}
+
+main {
+    grid-template-columns: min-content;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+}
+
+nav {
+    margin-left: 80%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li{
+    color: white;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+    cursor: pointer;
+}
+
+#signup {
+    color: yellow;
+    text-decoration: underline yellow;
+}
+
+.centerpiece {
+    margin-top: 10%;
+    height: 50%;
+    width: 50%;
+    position: relative;
+}
+
+
+#header-caption1 {
+    border: solid black;
+    border-width: 5px;
+    background-color: darkorange;
+    display: inline-block;
+    font-size: 160%;
+    padding: .5%;
+    position: absolute;
+    top: 28%;
+    right: 60%;
+}
+
+#header-caption2 {
+    border: solid black;
+    border-width: 5px;
+    background-color: yellow;
+    display: inline-block;
+    font-size: 160%;
+    padding: .5%;
+    position: absolute;
+    top: 66%;
+    right: 65%;
+}
+
+.top-container {
+    text-align: center;
+    margin: auto;
+    background-color:white;
+    position: relative;
+}
+
+.second-container {
+    text-align: center;
+    margin: 100px auto auto;
+    height: 200%;
+    width: 50%;
+    color: black;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1.5;
+    background-color: darkorange;
+    border: solid 10px;
+    border-color: black;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.third-container {
+    text-align: center;
+    margin: 100px auto auto;
+    height: 200%;
+    width: 50%;
+    color: black;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1.5;
+    background-color: yellow;
+    border: double 10px;
+    border-color: black;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+
+.slide-in {
+    background-color: orangered;
+    motion-path: left right;
+    transition: 5s, ease-in-out;
+}
+
+.bottom-container {
+    background-color: yellow;
+    text-align: center;
+    margin: 100px auto auto;
+    height: 200%;
+    width: 50%;
+    color: black;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1.5;
+    background-color: darkorange;
+    border: solid 10px;
+    border-color: black;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+

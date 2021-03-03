@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.text-center {
+  display: grid;
+  align-items: center;
+  position: relative;
+  grid-column: 1fr 350px 1fr;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.gears {
+  margin: auto;
+  max-width: 350px;
+  grid-column: 1/2;
+  position: relative;
+}
+
+.clockwise {
+  margin: auto;
+  width: 40%;
+  rotate: 20deg;
+  animation-name: clockwise;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.counterclockwise {
+  margin: auto;
+  width: 40%;
+  animation-name: counterclockwise;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterclockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.brain {
+  width: 15%;
+  position: absolute;
+  left: 12%;
+  top: 35%;
+}
+
+.fist {
+  width: 15%;
+  position: absolute;
+  right: 33%;
+  top: 35%;
+}
+
+.form-signin {
+  grid-column: 1/2;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.top {
+  width: 90%;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle {
+  width: 90%;
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.bottom {
+  width: 90%;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-primary {
+  display: block;
+  color: whitesmoke;
+  font-size: larger;
+  background-color: rgb(255, 102, 0);
+  width: 45%;
+}

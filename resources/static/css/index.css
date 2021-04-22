@@ -4,6 +4,12 @@ body {
   margin: 0 auto 0 auto;
 }
 
+.in-view {
+  visibility: visible;
+  opacity: 1;
+  transition: all .5s ease-in;
+}
+
 header {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -128,6 +134,81 @@ header {
   width: 100%;
 }
 
+@keyframes strike {
+  0% {opacity: 0}
+  5% {opacity: 100}
+  6% {opacity: 0}
+  28% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 100}
+  51% {opacity: 0}
+  100% {opacity: 0}
+}
+
+.strike {
+  position: absolute;
+  transform: rotate(5deg);
+  opacity: 0;
+  animation-name: strike;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  left: 15%;
+  bottom: 29.7%;
+  height: 17.5%;
+  width: 25%;
+}
+
+@keyframes strike2 {
+  0% {opacity: 0}
+  4% {opacity: 0}
+  5% {opacity: 100}
+  6% {opacity: 0}
+  28% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 100}
+  51% {opacity: 0}
+  100% {opacity: 0}
+}
+
+.strike2 {
+  position: absolute;
+  opacity: 0;
+  animation-delay: 2s;
+  animation-name: strike2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  left: 45%;
+  bottom: 29%;
+  height: 17.5%;
+  width: 25%;
+}
+
+@keyframes strike3 {
+  0% {opacity: 0}
+  6% {opacity: 0}
+  24% {opacity: 0}
+  25% {opacity: 100}
+  28% {opacity: 100}
+  29% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 100}
+  51% {opacity: 0}
+  100% {opacity: 0}
+}
+
+.strike3 {
+  position: absolute;
+  opacity: 0;
+  animation-delay: 2s;
+  animation-name: strike3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  left: 28.5%;
+  bottom: 28.7%;
+  height: 17.5%;
+  width: 25%;
+}
+
 .centerpiece-caption2 {
   position: absolute;
   z-index: 10;
@@ -159,12 +240,6 @@ main div p {
 div {
   visibility: hidden;
   opacity: 0;
-}
-
-.in-view {
-  visibility: visible;
-  opacity: 1;
-  transition: all .5s ease-in;
 }
 
 .orange {
@@ -228,6 +303,85 @@ div {
   width: 150px;
 }
 
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+.dice {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 25%;
+  bottom: 80%;
+  left: 10%;
+}
+
+.die1 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 5px black solid;
+}
+
+.die2 {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 5px black solid;
+  transform: rotate(45deg);
+}
+
+.dot {
+  position: absolute;
+  font-size: 10rem;
+  line-height: 1;
+  color: black;
+}
+
+.dot1 {
+  left: 4px;
+  top: -30px;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.dot2 {
+  right: 4px;
+  top: -30px;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.dot3 {
+  left: 4px;
+  bottom: 32px;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.dot4 {
+  right: 4px;
+  bottom: 32px;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.dot5 {
+  left: 37px;
+  top: -60px;
+}
+
 .l3 {
   grid-column: 1/2;
   grid-row: 5/6;
@@ -235,6 +389,42 @@ div {
   left: 30%;
   bottom: 80%;
   width: 320px;
+}
+
+.throne {
+  position: relative;
+  left: 20%;
+  grid-column: 1/2;
+  grid-row: 6/7;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes swell {
+  0% {scale: initial;}
+  50% {scale: 120%;}
+  100% {scale: initial;}
+}
+
+.crown {
+  position: absolute;
+  transform: rotate(-15deg);
+  animation-name: swell;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  left: 110%;
+  bottom: 165%;
+  width: 25px;
+  height: 25px;
+}
+
+.cleo {
+  position: absolute;
+  left: 75%;
+  bottom: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 .r3 {
@@ -261,21 +451,23 @@ div {
   color: white;
 }
 
-@keyframes throb {
-  0% {
-  font-size: 2.3rem;
-  color: white;
-} 100% {
-  font-size: 2.5rem;
-  color: white;
+@keyframes slide {
+  0%, 5%, 95%, 100% {
+    bottom: 0%;
+    transform: translate(0, 0);
+}
+45%, 55% {
+    bottom: 5%;
+    transform: translate(0, -5%);
 }
 }
 
 .throb {
-  animation-name: throb;
-  animation-duration: 1s;
-  animation-direction: alternate;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  color: white;
 }
 
 .l4 {
@@ -320,7 +512,6 @@ div {
   animation-timing-function: linear;
 }
 
-
 .steamroll {
   grid-column: 1/2;
   grid-row: 11/12;
@@ -338,6 +529,15 @@ div {
 .steamrolled {
   display: inline-block;
   width: 3%;
+}
+
+.bottom-line {
+  position: absolute;
+  bottom: 0%;
+  grid-row: 11/12;
+  width: 100%;
+  height: 10px;
+  background-color: black;
 }
 
 .l5 {
@@ -371,6 +571,19 @@ div {
   position: relative;
   left: 22%;
   width: 520px;
+}
+
+.hopeless {
+  position: relative;
+  width: 30%;
+  grid-column: 1/2;
+  grid-row: 17/18;
+  left: 20%;
+}
+
+.mental-health {
+  width: 200px;
+  height: 200px;
 }
 
 .r6 {

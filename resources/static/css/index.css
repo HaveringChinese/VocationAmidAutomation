@@ -270,6 +270,7 @@ div {
   grid-column: 1/2;
   grid-row: 1/2;
   position: relative;
+  z-index: 5;
   bottom: 80%;
   left: 20%;
   width: 500px;
@@ -278,10 +279,21 @@ div {
 .r1 {
   grid-column: 1/2;
   grid-row: 2/3;
+  z-index: 5;
   position: relative;
   left: 50%;
   bottom: 80%;
   width: 450px;
+}
+
+.top-line {
+  position: absolute;
+  grid-row: 1/2;
+  bottom: 120%;
+  z-index: 0;
+  width: 100%;
+  height: 200px;
+  background-color: black;
 }
 
 .l2 {
@@ -530,7 +542,7 @@ div {
   width: 3%;
 }
 
-.bottom-line {
+.middle-line {
   position: absolute;
   bottom: -83%;
   grid-row: 11/12;
@@ -733,6 +745,17 @@ button:hover {
   animation-iteration-count: infinite;
 }
 
+.bottom-line {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 200px;
+  background-color: black;
+}
+
 footer {
+  position: relative;
+  color: white;
+  font-size: 2rem;
   margin-top: 200px;
 }

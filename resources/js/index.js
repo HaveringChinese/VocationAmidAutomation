@@ -28,10 +28,10 @@ document.querySelector("button").addEventListener("click", function (event) {
 
   setTimeout(function () {
     window.open("signup.html");
-  }, 1000);
+  }, 500);
 
   setTimeout(function () {
     document.querySelector("body").classList.remove("darken");
-  }, 2000);
+  }, 500);
 });
 

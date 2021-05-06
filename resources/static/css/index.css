@@ -711,7 +711,7 @@ button:hover {
 .darken {
   background: black;
   background-color: black;
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 
 @keyframes swing {

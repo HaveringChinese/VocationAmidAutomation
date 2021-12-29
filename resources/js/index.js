@@ -27,7 +27,7 @@ document.querySelector("button").addEventListener("click", function (event) {
   document.querySelector("body").classList.add("darken");
 
   setTimeout(function () {
-    window.open("signup.html");
+    window.open("https://www.vocationamidautomation.com/signup.html");
   }, 500);
 
   setTimeout(function () {
@@ -35,3 +35,4 @@ document.querySelector("button").addEventListener("click", function (event) {
   }, 500);
 });
 
+document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
